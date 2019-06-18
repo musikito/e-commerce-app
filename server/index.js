@@ -33,6 +33,7 @@ const app = express();
 
 //Connect the mongoose to the database using it's connect method.
 mongoose.connect(
+  console.log(process.env.CONNECTION_STRING),
   process.env.CONNECTION_STRING,
   { useNewUrlParser: true },
   err => {
